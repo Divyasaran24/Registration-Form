@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 35px;
+  border: 2px solid violet;
+  border-top: 5px solid violet;
+  border-radius: 30px;
+  box-shadow: -5px -5px 15px rgba(171, 74, 142, 0.8),5px 5px 15px rgba(171, 74, 142, 0.8);
+  transform-origin: 50% 0%;
+  transform: scale3d(1 , 1 , 1);
+  transition: none;
+  animation: expand 0.8s 0.6s ease-out forwards;
+  opacity: 0;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background-image: linear-gradient(180deg, rgb(207, 59, 207), rgb(101, 196, 227));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.succ{
+  background-image: linear-gradient(to right, rgb(207, 59, 207), rgb(101, 196, 227));
+}
+.box {
+  margin-bottom: 15px;
+  animation: bounce 0.6s ease-in;
+}
+label {
+  font-size: 18px;
+  font-weight: 400;
+  color: whitesmoke;
+}
+.input-box {
+  width: 90%;
+  padding: 10px 10px 5px 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: whitesmoke;
+  font-size: 18px;
+}
+.input-box {
+  margin-bottom: 10px;
+}
+.error {
+  color: red;
+}
+.check-box {
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+p {
+  font-size: 14px;
+  color: #ccc;
+}
+a{
+  color: violet;
+}
+.btnn {
+  text-align: center;
+}
+button {
+  padding: 10px 50px;
+  margin: 15px 0px 8px;
+  background-image: linear-gradient(to right, rgb(207, 59, 207), rgba(68, 68, 237, 0.84), rgb(101, 196, 227));
+  color: whitesmoke;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(to right, rgb(101, 196, 227), rgba(68, 68, 237, 0.84), rgb(207, 59, 207));
+  
+}
+
+.password-strength {
+  margin-top: 5px;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@keyframes expand { 
+	0% {  transform: scale3d(1,0,1);  opacity:0; }
+	25% {  transform: scale3d(1,1.2,1); }
+	50% {  transform: scale3d(1,0.85,1); }
+	75% { -webkit-transform: scale3d(1,1.05,1); }
+	100% {  transform: scale3d(1,1,1);  opacity:1; }
+}
+
+@keyframes bounce { 
+	0% {  transform: translate3d(0,-25px,0); opacity:0; }
+	25% {transform: translate3d(0,10px,0); }
+	50% {  transform: translate3d(0,-6px,0); }
+	75% {  transform: translate3d(0,2px,0); }
+	100% {  transform: translate3d(0,0,0); opacity: 1; }
+}
+
+.pop-up{
+  position:fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(123, 123, 123, 0.868);
+  z-index: 10;
+  display: none;
+}
+
+.pop-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  color: black;
+  border: 2px solid violet;
+  box-shadow: -5px -5px 15px rgba(171, 74, 142, 0.8),5px 5px 15px rgba(171, 74, 142, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.okay-btn{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 30px;
+}
+.circle{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  background-image: linear-gradient(180deg, rgb(207, 59, 207), rgb(101, 196, 227));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.small-box{
+  display: flex;
+  justify-content: space-between;
+  word-wrap: nowrap;
+  padding: 10px;
+}
+
+.forget{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forget:hover{
+  text-decoration:underline;
+  color:  rgb(101, 196, 227);
+
+}
+
+@media screen and (max-width: 375px) {
+  .small-box{
+    display:block;
+  }
+ 
+  .ch-para{
+    display: flex;
+    justify-content: center;
+  }
+
+  .forget{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .forget:hover{
+    text-decoration:underline;
+    color:  rgb(101, 196, 227);
+  }
+  .input-box{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  p{
+    margin-bottom: 0px;
+  }
+  h1{
+    margin-bottom: 15px;
+  }
+  
+}
